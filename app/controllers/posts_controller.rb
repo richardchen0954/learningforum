@@ -36,7 +36,7 @@ class PostsController < ApplicationController
       end
 
 
- private
+ protected
 
  def post_params
    params.require(:post).permit(:content)
