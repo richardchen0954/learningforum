@@ -2,7 +2,7 @@
   <div class="group">
 
     <% if current_user && current_user == @group.user %>
-    <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right")%>
+    <%= link_to("改", edit_group_path(@group), class: "btn btn-primary pull-right")%>
     <% end %>
 
   </div>
@@ -14,7 +14,7 @@
        <%= f.text_area :content, :class => "form-control" %>
      </div>
      <div class="form-group">
-       <%= f.submit :class => "btn btn-primary" %>
+       <%= f.submit "评", :class => "btn btn-primary" %>
      </div>
    <% end %>
 
@@ -23,7 +23,7 @@
   <%= render :partial => post, :locals => { :post => post } %>
   <% end %>
   </div>
-  
+
   <div class="text-center">
     <%= will_paginate @posts %>
   </div>
